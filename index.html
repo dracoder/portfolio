@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manas Bhowmick - Fullstack Developer Portfolio</title>
+    <meta name="description" content="Manas Bhowmick - Fullstack Developer with 5+ years experience in Laravel, Vue, React, Node.js. Building SaaS, AI tools & real-time platforms.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#5A67D8',
+                        'primary-dark': '#4C51BF',
+                        'accent': '#48BB78',
+                        'background': '#F7FAFC',
+                        'text-primary': '#2D3748',
+                        'text-secondary': '#4A5568',
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 2s infinite',
+                        'pulse-glow': 'pulse 2s infinite',
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS for additional animations -->
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .hover-glow:hover {
+            box-shadow: 0 0 20px rgba(90, 103, 216, 0.4);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="font-inter bg-background text-text-primary antialiased">
+    
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-accent/5 px-4">
+        <div class="max-w-4xl mx-auto text-center animate-fade-in-up">
+            <!-- Main Headline -->
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 leading-tight">
+                I don't just code.<br>
+                <span class="text-primary">I architect solutions</span><br>
+                that scale.
+            </h1>
+            
+            <!-- Subheadline -->
+            <p class="text-lg md:text-xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
+                Specializing in Laravel, Vue, React, and Node.js — delivering enterprise-grade SaaS platforms, AI-integrated applications, and real-time collaboration tools with precision and performance.
+            </p>
+            
+            <!-- Name and Title -->
+            <div class="mb-8">
+                <h2 class="text-xl md:text-2xl font-semibold text-text-primary mb-2">Manas Bhowmick</h2>
+                <p class="text-base md:text-lg text-text-secondary">Senior Fullstack Engineer | SaaS Architect | Product Development Consultant</p>
+            </div>
+            
+            <!-- Contact Links -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <a href="https://github.com/dracoder" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center px-8 py-4 bg-text-primary text-white rounded-lg font-medium hover:bg-gray-800 transition-all duration-300 hover-glow">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="mailto:manas.bhowmick26@gmail.com" 
+                   class="inline-flex items-center px-8 py-4 bg-primary text-white rounded-lg font-medium hover:bg-primary-dark transition-all duration-300 hover-glow">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    Email Me
+                </a>
+            </div>
+            
+            <!-- Scroll Down Arrow -->
+            <div class="animate-bounce-slow">
+                <a href="#projects" class="inline-block p-2 rounded-full hover:bg-primary/10 transition-colors duration-300">
+                    <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Me Section -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="animate-on-scroll">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 text-text-primary">
+                    <span class="text-primary">About</span> Me
+                </h2>
+                <div class="text-base md:text-lg text-text-secondary leading-relaxed space-y-6 max-w-3xl mx-auto">
+                    <p>
+                        I'm Manas — a seasoned fullstack engineer with over five years of expertise in architecting and deploying enterprise-grade SaaS platforms, asynchronous processing systems, and AI-integrated applications. My portfolio spans from rapid MVP development to sophisticated multi-tenant systems leveraging Stripe integration, Redis caching, WebSocket real-time communication, and WebRTC video streaming technologies.
+                    </p>
+                    <p>
+                        My engineering philosophy centers on crafting maintainable, performant code that delivers immediate value while maintaining long-term scalability. The discipline I've cultivated through fitness translates directly into my professional approach: methodical planning, consistent execution, and unwavering commitment to excellence.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Work With Me Section -->
+    <section class="py-20 px-4 bg-background">
+        <div class="max-w-4xl mx-auto">
+            <div class="animate-on-scroll">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 text-text-primary">
+                    Why Partner <span class="text-primary">With Me?</span>
+                </h2>
+                <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <div class="flex items-start space-x-3">
+                        <div class="flex-shrink-0">
+                            <svg class="w-5 h-5 text-accent mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <p class="text-sm md:text-base text-text-secondary">Five years of comprehensive fullstack engineering experience</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="flex-shrink-0">
+                            <svg class="w-5 h-5 text-accent mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <p class="text-sm md:text-base text-text-secondary">Proven expertise across Node, Express, Laravel, Vue, React, Redis, WebRTC, and payment systems</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="flex-shrink-0">
+                            <svg class="w-5 h-5 text-accent mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <p class="text-sm md:text-base text-text-secondary">End-to-end capability spanning backend architecture, frontend development, and DevOps</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="flex-shrink-0">
+                            <svg class="w-5 h-5 text-accent mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <p class="text-sm md:text-base text-text-secondary">Established track record with enterprise clients and distributed development teams</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="flex-shrink-0">
+                            <svg class="w-5 h-5 text-accent mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <p class="text-sm md:text-base text-text-secondary">Balanced focus on intuitive user experiences and optimized system performance</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="flex-shrink-0">
+                            <svg class="w-5 h-5 text-accent mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <p class="text-sm md:text-base text-text-secondary">Efficient project delivery with transparent communication and strategic planning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="animate-on-scroll">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 text-text-primary">
+                    Featured <span class="text-primary">Projects</span>
+                </h2>
+                <p class="text-center text-text-secondary mb-12 max-w-3xl mx-auto text-sm md:text-base leading-relaxed">
+                    A curated selection of enterprise-grade applications demonstrating advanced architectural patterns, real-time communication systems, and sophisticated user experiences across diverse industry verticals.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- ClipSync Project -->
+                    <div class="project-card bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl">
+                        <div class="mb-4">
+                            <h3 class="text-lg font-semibold text-text-primary mb-2">ClipSync</h3>
+                            <p class="text-text-secondary mb-4 text-sm leading-relaxed">Advanced asynchronous video collaboration platform featuring real-time screen capture, camera recording, and professional studio-grade editing capabilities</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Vue.js</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Laravel</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Node.js</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">WebRTC</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">FFMPEG</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/dracoder/ClipSync" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-300">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                    
+                    <!-- Sendora Project -->
+                    <div class="project-card bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl">
+                        <div class="mb-4">
+                            <h3 class="text-lg font-semibold text-text-primary mb-2">Sendora</h3>
+                            <p class="text-text-secondary mb-4 text-sm leading-relaxed">Enterprise-grade multi-tenant email marketing platform with sophisticated automation workflows, comprehensive analytics, and integrated billing management</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Laravel</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">React</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Redis</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">MySQL</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Inertia.js</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Stripe</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/dracoder/sendora" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-300">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                    
+                    <!-- MythosForge Project -->
+                    <div class="project-card bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl">
+                        <div class="mb-4">
+                            <h3 class="text-lg font-semibold text-text-primary mb-2">MythosForge</h3>
+                            <p class="text-text-secondary mb-4 text-sm leading-relaxed">Innovative AI-driven interactive storytelling platform with dynamic narrative progression, intelligent image generation, and subscription-based monetization architecture</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Laravel</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Next.js</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Tailwind CSS</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Stripe</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Redis</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/dracoder/MythosForge" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-300">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                    
+                    <!-- The Verse Project -->
+                    <div class="project-card bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl">
+                        <div class="mb-4">
+                            <h3 class="text-lg font-semibold text-text-primary mb-2">The Verse</h3>
+                            <p class="text-text-secondary mb-4 text-sm leading-relaxed">Community-centric social networking platform featuring real-time messaging, interactive polling systems, event coordination, and sentiment-based content categorization</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Vue.js</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Node.js</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Express.js</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">PostgreSQL</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Vuex</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/dracoder/verse" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-300">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact / Hire Me Section -->
+    <section class="py-20 px-4 bg-gradient-to-br from-primary/5 via-background to-accent/5">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="animate-on-scroll">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 text-text-primary">
+                    Ready to <span class="text-primary">Collaborate?</span>
+                </h2>
+                <p class="text-base md:text-lg text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
+                    I'm currently accepting select freelance and consulting engagements. Whether you're scaling an existing platform, architecting a new product from the ground up, or implementing complex real-time features — I bring the expertise and precision your project demands.
+                </p>
+                <a href="mailto:manas.bhowmick26@gmail.com" 
+                   class="inline-flex items-center px-8 py-4 bg-primary text-white text-base font-semibold rounded-lg hover:bg-primary-dark transition-all duration-300 hover-glow animate-pulse-glow">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    Let's Discuss Your Project
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-8 px-4 bg-text-primary text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-gray-300">
+                © 2024 Manas Bhowmick. Built with passion and modern web technologies.
+            </p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript for scroll animations -->
+    <script>
+        // Smooth scroll animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all elements with animate-on-scroll class
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Add some delay to animations for staggered effect
+        document.querySelectorAll('.project-card').forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+        });
+    </script>
+</body>
+</html> 
